@@ -1,5 +1,6 @@
 :root{
   --yellow: #ffc107;
+  --resetGreen : rgba(7, 243, 113, 0.467);
 }
 html{
   box-sizing: border-box;
