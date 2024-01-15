@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "../Icons/Icon";
 import "./Card.css";
 
-function Card ({onPlay,player,index}) {
+function Card ({onPlay,player,index,gameEnded}) {
     let icon = <Icon/>
     if(player=="O"){
         icon = <Icon name="circle"/>
@@ -10,7 +10,7 @@ function Card ({onPlay,player,index}) {
         icon = <Icon name ="cross"/>
     }
     return (
-        <div className="card" onClick={()=>onPlay(index)}>
+        <div className="card" onClick={()=>!gameEnded && player=="" &&  onPlay(index)}>
            {icon}
         </div>
     )
